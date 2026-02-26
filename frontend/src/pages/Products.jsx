@@ -155,14 +155,14 @@ const Products = () => {
           {/* Header */}
           <div className="login-card" style={{ marginBottom: '32px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '48px', height: '48px', background: 'linear-gradient(135deg, #9f7aea 0%, #805ad5 100%)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(159, 122, 234, 0.4)' }}>
+              <div style={{ width: '48px', height: '48px', background: 'linear-gradient(135deg, #c1121f 0%, #8b0000 100%)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(193,18,31,0.35)' }}>
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 style={{ fontSize: '32px', fontWeight: '700', color: '#1a202c', marginBottom: '4px', background: 'linear-gradient(135deg, #9f7aea 0%, #805ad5 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                <h1 style={{ fontSize: '32px', fontWeight: '700', color: '#fff', marginBottom: '4px', background: 'linear-gradient(135deg, #c1121f 0%, #8b0000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   Gestion des Produits
                 </h1>
-                <p style={{ color: '#718096', fontSize: '14px' }}>Gérez votre catalogue de produits</p>
+                <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '14px' }}>Gérez votre catalogue de produits</p>
               </div>
             </div>
           </div>
@@ -205,13 +205,13 @@ const Products = () => {
           {/* Products Grid */}
           {filteredProducts.length === 0 ? (
             <div className="login-card" style={{ textAlign: 'center', padding: '64px 32px' }}>
-              <div style={{ width: '80px', height: '80px', background: 'rgba(159, 122, 234, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
-                <Package className="w-10 h-10" style={{ color: '#9f7aea' }} />
+              <div style={{ width: '80px', height: '80px', background: 'rgba(255,255,255,0.02)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
+                <Package className="w-10 h-10" style={{ color: '#fff' }} />
               </div>
-              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#2d3748', marginBottom: '8px' }}>
+              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#fff', marginBottom: '8px' }}>
                 {searchTerm ? 'Aucun produit trouvé' : 'Aucun produit disponible'}
               </h3>
-              <p style={{ color: '#718096', marginBottom: '24px' }}>
+              <p style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '24px' }}>
                 {searchTerm ? 'Essayez une autre recherche' : 'Commencez par ajouter votre premier produit'}
               </p>
               {!searchTerm && (
@@ -226,10 +226,10 @@ const Products = () => {
               {filteredProducts.map((product) => {
                 const status = getStockStatus(product.stock);
                 const statusColors = {
-                  red: { bg: 'rgba(245, 101, 101, 0.1)', text: '#f56565', border: 'rgba(245, 101, 101, 0.3)' },
-                  orange: { bg: 'rgba(237, 137, 54, 0.1)', text: '#ed8936', border: 'rgba(237, 137, 54, 0.3)' },
-                  yellow: { bg: 'rgba(237, 204, 88, 0.1)', text: '#d69e2e', border: 'rgba(237, 204, 88, 0.3)' },
-                  green: { bg: 'rgba(72, 187, 120, 0.1)', text: '#48bb78', border: 'rgba(72, 187, 120, 0.3)' },
+                  red: { bg: 'rgba(245, 101, 101, 0.08)', text: '#f56565', border: 'rgba(245, 101, 101, 0.2)' },
+                  orange: { bg: 'rgba(237, 137, 54, 0.08)', text: '#ed8936', border: 'rgba(237, 137, 54, 0.2)' },
+                  yellow: { bg: 'rgba(237, 204, 88, 0.08)', text: '#d69e2e', border: 'rgba(237, 204, 88, 0.2)' },
+                  green: { bg: 'rgba(255,255,255,0.02)', text: '#ffffff', border: 'rgba(255,255,255,0.04)' },
                 };
                 const statusColor = statusColors[status.color];
 
@@ -238,29 +238,29 @@ const Products = () => {
                     {product.image_url ? (
                       <img src={product.image_url} alt={product.nom} style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px', marginBottom: '16px' }} />
                     ) : (
-                      <div style={{ width: '100%', height: '180px', background: 'linear-gradient(135deg, rgba(159, 122, 234, 0.1), rgba(128, 90, 213, 0.1))', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                        <Package className="w-16 h-16" style={{ color: '#9f7aea' }} />
+                      <div style={{ width: '100%', height: '180px', background: 'linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                        <Package className="w-16 h-16" style={{ color: '#fff' }} />
                       </div>
                     )}
                     
                     <div style={{ marginBottom: '12px' }}>
-                      <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2d3748', marginBottom: '8px' }}>{product.nom}</h3>
-                      <p style={{ fontSize: '24px', fontWeight: '700', color: '#48bb78' }}>{formatPrice(product.prix)}</p>
+                      <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#fff', marginBottom: '8px' }}>{product.nom}</h3>
+                      <p style={{ fontSize: '24px', fontWeight: '700', color: '#fff' }}>{formatPrice(product.prix)}</p>
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                      <span style={{ fontSize: '14px', color: '#718096' }}>Stock:</span>
+                      <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.75)' }}>Stock:</span>
                       <span style={{ padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: '600', background: statusColor.bg, color: statusColor.text, border: `1px solid ${statusColor.border}` }}>
                         {product.stock} - {status.label}
                       </span>
                     </div>
 
                     <div style={{ display: 'flex', gap: '8px' }}>
-                      <button onClick={() => handleOpenModal(product)} style={{ flex: 1, padding: '10px', background: 'rgba(102, 126, 234, 0.1)', border: 'none', borderRadius: '10px', color: '#667eea', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.3s' }}>
+                      <button onClick={() => handleOpenModal(product)} style={{ flex: 1, padding: '10px', background: 'linear-gradient(135deg, #c1121f 0%, #8b0000 100%)', border: 'none', borderRadius: '10px', color: '#fff', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.3s' }}>
                         <Edit className="w-4 h-4" />
                         Modifier
                       </button>
-                      <button onClick={() => handleDelete(product)} style={{ flex: 1, padding: '10px', background: 'rgba(245, 101, 101, 0.1)', border: 'none', borderRadius: '10px', color: '#f56565', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.3s' }}>
+                      <button onClick={() => handleDelete(product)} style={{ flex: 1, padding: '10px', background: 'rgba(193,18,31,0.08)', border: 'none', borderRadius: '10px', color: '#c1121f', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.3s' }}>
                         <Trash2 className="w-4 h-4" />
                         Supprimer
                       </button>
@@ -279,10 +279,10 @@ const Products = () => {
           <div className="login-card" style={{ maxWidth: '500px', width: '100%', maxHeight: '90vh', overflowY: 'auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ width: '40px', height: '40px', background: 'linear-gradient(135deg, #9f7aea 0%, #805ad5 100%)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '40px', height: '40px', background: 'linear-gradient(135deg, #c1121f 0%, #8b0000 100%)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Package className="w-5 h-5 text-white" />
                 </div>
-                <h2 style={{ fontSize: '20px', fontWeight: '700', color: '#1a202c' }}>
+                <h2 style={{ fontSize: '20px', fontWeight: '700', color: '#fff' }}>
                   {editingProduct ? 'Modifier le produit' : 'Nouveau produit'}
                 </h2>
               </div>
