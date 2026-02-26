@@ -25,7 +25,7 @@ class ProductDAL:
         except Exception as e:
             raise e
     
-    def get_all_products(self, skip: int = 0, limit: int = 100) -> List[Product]:
+    def get_all_products(self, skip: int = 0, limit: int = 1) -> List[Product]:
         """Récupérer tous les produits avec pagination"""
         try:
             return self.db.query(Product).offset(skip).limit(limit).all()

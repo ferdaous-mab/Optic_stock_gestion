@@ -61,7 +61,7 @@ const Login = () => {
               <span style={{ fontSize: '32px' }}>👓</span>
             </div>
           </div>
-          <h1 className="login-title">Optic Commerce</h1>
+          <h1 className="login-title">Optic Stock Gestion</h1>
           <p className="login-subtitle">Connectez-vous à votre compte</p>
         </div>
 
@@ -114,7 +114,7 @@ const Login = () => {
                 required
                 className="form-input"
               />
-              <button
+               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="toggle-password"
@@ -131,6 +131,7 @@ const Login = () => {
                   </svg>
                 )}
               </button>
+             
             </div>
           </div>
 

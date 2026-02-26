@@ -61,19 +61,7 @@ const Sidebar = () => {
             </NavLink>
           ))}
         </div>
-
-        {/* Stats Section */}
-        <div className="sidebar-footer">
-          <div className="sidebar-pro-card">
-            <div className="sidebar-pro-content">
-              <div className="sidebar-pro-icon">✨</div>
-              <div>
-                <p className="sidebar-pro-title">Version Pro</p>
-                <p className="sidebar-pro-subtitle">Toutes les fonctionnalités</p>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </nav>
     </aside>
   );

@@ -54,7 +54,7 @@ const Register = () => {
               <span style={{ fontSize: '32px' }}>👓</span>
             </div>
           </div>
-          <h1 className="login-title">Optic Commerce</h1>
+          <h1 className="login-title">Optic Stock Gestion</h1>
           <p className="login-subtitle">Créez votre compte</p>
         </div>
 

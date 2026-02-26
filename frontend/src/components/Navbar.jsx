@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
             <div>
               <h1 className="navbar-title">
-                Optic Commerce
+                Optic Stock Gestion
               </h1>
               <p className="navbar-subtitle">Gestion professionnelle</p>
             </div>

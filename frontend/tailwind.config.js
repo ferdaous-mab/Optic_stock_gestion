@@ -10,18 +10,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        casa: {
+          50: '#fff1f1',
+          100: '#ffe6e6',
+          200: '#ffc7c7',
+          300: '#ffa3a3',
+          400: '#ff6b6b',
+          500: '#c1121f',
+          600: '#a10f1a',
+          700: '#7e0c14',
+          800: '#5c080f',
+          900: '#2b0408',
         },
+        'casa-dark': '#0b0b0b',
+        'casa-white': '#ffffff',
       },
     },
   },
